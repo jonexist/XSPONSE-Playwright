@@ -1,4 +1,7 @@
 import { test as setup, expect } from '@playwright/test';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 setup.describe('Authentication Tests', () => {
   setup.beforeEach(async ({ page }) => {
@@ -15,9 +18,11 @@ setup.describe('Authentication Tests', () => {
     await page.getByRole('textbox', { name: 'Email' }).click();
     await page
       .getByRole('textbox', { name: 'Email' })
-      .fill('admin@xsponse.com');
+      .fill(process.env.TEST_EMAIL || '');
     await page.getByRole('textbox', { name: 'Password' }).click();
-    await page.getByRole('textbox', { name: 'Password' }).fill('password');
+    await page
+      .getByRole('textbox', { name: 'Password' })
+      .fill(process.env.TEST_PASSWORD || '');
     await page.getByRole('button', { name: 'Sign In' }).click();
 
     await page.waitForURL('/dashboard');
