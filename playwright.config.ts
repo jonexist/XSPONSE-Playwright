@@ -28,7 +28,7 @@ export default defineConfig({
     /* Base URL to use in actions like `await page.goto('/')`. */
     baseURL: process.env.BASE_DEV_URL,
     // Set viewport size globally
-    viewport: { width: 1680, height: 1050 }, // Standard laptop screen size
+    viewport: { width: 1920, height: 1080 }, // Standard laptop screen size
     // Ensure viewport is set before each test
     launchOptions: {
       args: [`--window-size=1920,1080`],
@@ -47,14 +47,14 @@ export default defineConfig({
       name: 'setup',
       testMatch: '**/global.setup.ts',
       use: {
-        viewport: { width: 1680, height: 1050 },
+        viewport: { width: 1920, height: 1080 },
       },
     },
     {
       name: 'chromium',
       use: {
         ...devices['Desktop Chrome'],
-        viewport: { width: 1680, height: 1050 },
+        viewport: { width: 1920, height: 1080 },
         storageState: 'playwright/.auth/user.json',
       },
       dependencies: ['setup'],

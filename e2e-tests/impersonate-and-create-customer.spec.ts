@@ -6,31 +6,30 @@ test('Dealer impersonation and customer creation flow', async ({ page }) => {
   await page.goto('/account-management/dealer');
 
   // List of dealers to choose from
-  // const listOfDealers = [
-  //   'Smitham, Rowe and Johnson',
-  //   'Technologia Company',
-  //   'Treutel - Schroeder',
-  //   'Mitchell Inc',
-  //   'Purdy Inc',
-  // ];
+  const listOfDealers = [
+    'Smitham, Rowe and Johnson',
+    'Technologia Company',
+    'Treutel - Schroeder',
+    'Mitchell Inc',
+    'Purdy Inc',
+  ];
 
   // Pick a random dealer from the list
-  // const randomDealer =
-  //   listOfDealers[Math.floor(Math.random() * listOfDealers.length)];
+  const randomDealer =
+    listOfDealers[Math.floor(Math.random() * listOfDealers.length)];
 
   // Search for specific dealer
   const dealerSearchInput = page.getByRole('textbox', {
     name: 'Search Dealer',
   });
 
-  await dealerSearchInput.fill('Smitham, Rowe and Johnson');
+  await dealerSearchInput.fill(randomDealer);
 
   // Select dealer from results
-  await expect(
-    page.getByRole('cell', { name: 'Smitham, Rowe and Johnson' })
-  ).toBeVisible();
+  await expect(page.getByRole('cell', { name: randomDealer })).toBeVisible();
 
   // Click impersonate user button
+  await page.waitForTimeout(3000);
   await page.locator('tbody button').first().click();
 
   // Select user to impersonate
