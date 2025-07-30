@@ -18,6 +18,7 @@ test('should able to search for a cutomer', async ({ page }) => {
     await searchInput.fill(customerName);
 
     // Verify search results
+    //searchInput should be visible and contain the customer name
     await expect(page.getByText(customerName)).toBeVisible();
 
     // Clear search and verify it's empty
