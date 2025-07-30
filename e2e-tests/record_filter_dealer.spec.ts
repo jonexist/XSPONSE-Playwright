@@ -6,6 +6,7 @@ test.describe('Filter by Dealer', () => {
   });
 
 test('filter by dealer', async ({ page }) => {
+  // Click the Dealer filter dropdown
   await page.locator('.grow').first().click();
   await page.getByRole('option', { name: 'AbaloneTech' }).click();
     const dealerName = 'AbaloneTech';   
