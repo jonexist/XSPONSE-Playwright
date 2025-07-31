@@ -5,7 +5,7 @@ test.describe("update cutomer", () => {
     await page.goto("/account-management/customer");
   }) 
 
-  test("should able to update customer", async ({ page }) => { 
+  test("should be able to update customer", async ({ page }) => { 
     const row = page.locator("tr").filter({ hasText: "Nexus Innovations Inc." });
 
     // Click the row to select the customer
