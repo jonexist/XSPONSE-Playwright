@@ -18,9 +18,6 @@ test.only('log in as admin and impersonate customer, Event creation – basic fl
 
   // Verify that the user is impersonated successfully
     await expect(page.getByText("User impersonated successfully")).toBeVisible();
-
-  //navigate to /administration/playlist
-  await page.goto('/administration/playlist');
   
   // helpers
   const hackerVerb = faker.hacker.ingverb().toUpperCase();
@@ -134,3 +131,4 @@ await test.step('Fill basic details', async () => {
   });
 })
 });
+
