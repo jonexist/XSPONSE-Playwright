@@ -63,7 +63,7 @@ await test.step('Fill basic details', async () => {
     const eventNameInput = page.getByPlaceholder('Event Name');
     await expect(eventNameInput).toBeVisible();
     await eventNameInput.click();
-    await eventNameInput.fill('test 1 X-Connect Input Module Port 1');
+    await eventNameInput.fill('test 1 X-Connect Input Module Port 1 ${eventName}');
 
 
     await page
@@ -165,7 +165,7 @@ await test.step('Fill basic details', async () => {
     const eventNameInput = page.getByPlaceholder('Event Name');
     await expect(eventNameInput).toBeVisible();
     await eventNameInput.click();
-    await eventNameInput.fill('test 2 X-Connect Input Module Port 2');
+    await eventNameInput.fill('test 2 X-Connect Input Module Port 2 ${eventName}');
     await page
       .getByRole('textbox', { name: 'Enter details' })
       .fill(faker.lorem.paragraph());
@@ -263,7 +263,7 @@ await test.step('Fill basic details', async () => {
     const eventNameInput = page.getByPlaceholder('Event Name');
     await expect(eventNameInput).toBeVisible();
     await eventNameInput.click();
-    await eventNameInput.fill("test 3 X-Detect Environmental Duct Mount");
+    await eventNameInput.fill("test 3 X-Detect Environmental Duct Mount ${eventName}");
     await page
     .getByRole('textbox', { name: 'Enter details' })
     .fill(faker.lorem.paragraph());
@@ -345,7 +345,7 @@ await test.step('Fill basic details', async () => {
     const eventNameInput = page.getByPlaceholder('Event Name');
     await expect(eventNameInput).toBeVisible();
     await eventNameInput.click();
-    await eventNameInput.fill('test 4 event x-protect desk button');
+    await eventNameInput.fill('test 4 event x-protect desk button ${eventName}');
     await page
       .getByRole('textbox', { name: 'Enter details' })
       .fill(faker.lorem.paragraph());
@@ -432,7 +432,7 @@ await test.step('Fill basic details', async () => {
     const eventNameInput = page.getByPlaceholder('Event Name');
     await expect(eventNameInput).toBeVisible();
     await eventNameInput.click();
-    await eventNameInput.fill('test 5 event X-Protect Wall Panic Button');
+    await eventNameInput.fill('test 5 event X-Protect Wall Panic Button ${eventName}');
     await page
       .getByRole('textbox', { name: 'Enter details' })
       .fill(faker.lorem.paragraph());
@@ -519,7 +519,7 @@ await test.step('Fill basic details', async () => {
     const eventNameInput = page.getByPlaceholder('Event Name');
     await expect(eventNameInput).toBeVisible();
     await eventNameInput.click();
-    await eventNameInput.fill('test 6 event x-protect desk button');
+    await eventNameInput.fill('test 6 event x-protect desk button ${eventName}');
     await page
       .getByRole('textbox', { name: 'Enter details' })
       .fill(faker.lorem.paragraph());
@@ -605,7 +605,7 @@ await test.step('Fill basic details', async () => {
     const eventNameInput = page.getByPlaceholder('Event Name');
     await expect(eventNameInput).toBeVisible();
     await eventNameInput.click();
-    await eventNameInput.fill('test 7 event X-Shield Cover');
+    await eventNameInput.fill('test 7 event X-Shield Cover ${eventName}');
     await page
       .getByRole('textbox', { name: 'Enter details' })
       .fill(faker.lorem.paragraph());
@@ -691,7 +691,7 @@ await test.step('Fill basic details', async () => {
     const eventNameInput = page.getByPlaceholder('Event Name');
     await expect(eventNameInput).toBeVisible();
     await eventNameInput.click();
-    await eventNameInput.fill('test 8 event X-Wearable Panic Badge Holder Activate - 1');
+    await eventNameInput.fill('test 8 event X-Wearable Panic Badge Holder Activate - 1 ${eventName}');
     await page
       .getByRole('textbox', { name: 'Enter details' })
       .fill(faker.lorem.paragraph());
@@ -772,7 +772,7 @@ await test.step('Fill basic details', async () => {
     const eventNameInput = page.getByPlaceholder('Event Name');
     await expect(eventNameInput).toBeVisible();
     await eventNameInput.click();
-    await eventNameInput.fill('test 9 event X-Wearable Panic Badge Holder Activate - 2');
+    await eventNameInput.fill('test 9 event X-Wearable Panic Badge Holder Activate - 2 ${eventName}');
     await page
       .getByRole('textbox', { name: 'Enter details' })
       .fill(faker.lorem.paragraph());  
@@ -854,7 +854,7 @@ await test.step('Fill basic details', async () => {
     const eventNameInput = page.getByPlaceholder('Event Name');
     await expect(eventNameInput).toBeVisible();
     await eventNameInput.click();
-    await eventNameInput.fill('test 10 event X-Wearable Panic Badge Holder Activate - 3');
+    await eventNameInput.fill('test 10 event X-Wearable Panic Badge Holder Activate - 3 ${eventName}');
     await page
       .getByRole('textbox', { name: 'Enter details' })
       .fill(faker.lorem.paragraph());
@@ -941,7 +941,7 @@ await test.step('Fill basic details', async () => {
     const eventNameInput = page.getByPlaceholder('Event Name');
     await expect(eventNameInput).toBeVisible();
     await eventNameInput.click();
-    await eventNameInput.fill('test 11 X-Wearable Panic Badge Holder Deactivate - 1');
+    await eventNameInput.fill('test 11 X-Wearable Panic Badge Holder Deactivate - 1 ${eventName}');
     await page
       .getByRole('textbox', { name: 'Enter details' })
       .fill(faker.lorem.paragraph());
@@ -1025,7 +1025,7 @@ await test.step('Fill basic details', async () => {
     const eventNameInput = page.getByPlaceholder('Event Name');
     await expect(eventNameInput).toBeVisible();
     await eventNameInput.click();
-    await eventNameInput.fill('test 12 X-Wearable Panic Badge Holder Deactivate - 2');
+    await eventNameInput.fill('test 12 X-Wearable Panic Badge Holder Deactivate - 2 ${eventName}');
     await page
       .getByRole('textbox', { name: 'Enter details' })
       .fill(faker.lorem.paragraph());
@@ -1109,7 +1109,7 @@ await test.step('Fill basic details', async () => {
     const eventNameInput = page.getByPlaceholder('Event Name');
     await expect(eventNameInput).toBeVisible();
     await eventNameInput.click();
-    await eventNameInput.fill('test 13 X-Wearable Panic Badge Holder Deactivate - 3');
+    await eventNameInput.fill('test 13 X-Wearable Panic Badge Holder Deactivate - 3 ${eventName}');
     await page
       .getByRole('textbox', { name: 'Enter details' })
       .fill(faker.lorem.paragraph());
@@ -1191,7 +1191,7 @@ await test.step('Fill basic details', async () => {
     const eventNameInput = page.getByPlaceholder('Event Name');
     await expect(eventNameInput).toBeVisible();
     await eventNameInput.click();
-    await eventNameInput.fill('test 14 X-Wearable Rechargeable Panic Badge Holder Activate - 1');
+    await eventNameInput.fill('test 14 X-Wearable Rechargeable Panic Badge Holder Activate - 1 ${eventName}');
     await page
       .getByRole('textbox', { name: 'Enter details' })
       .fill(faker.lorem.paragraph());
@@ -1276,7 +1276,7 @@ await test.step('Fill basic details', async () => {
     const eventNameInput = page.getByPlaceholder('Event Name');
     await expect(eventNameInput).toBeVisible();
     await eventNameInput.click();
-    await eventNameInput.fill('test 15 X-Wearable Rechargeable Panic Badge Holder Activate - 2');
+    await eventNameInput.fill('test 15 X-Wearable Rechargeable Panic Badge Holder Activate - 2 ${eventName}');
     await page
       .getByRole('textbox', { name: 'Enter details' })
       .fill(faker.lorem.paragraph());
@@ -1361,7 +1361,7 @@ await test.step('Fill basic details', async () => {
     const eventNameInput = page.getByPlaceholder('Event Name');
     await expect(eventNameInput).toBeVisible();
     await eventNameInput.click();
-    await eventNameInput.fill('test 16 X-Wearable Rechargeable Panic Badge Holder Activate - 3');
+    await eventNameInput.fill('test 16 X-Wearable Rechargeable Panic Badge Holder Activate - 3 ${eventName}');
     await page
       .getByRole('textbox', { name: 'Enter details' })
       .fill(faker.lorem.paragraph());
@@ -1446,7 +1446,7 @@ await test.step('Fill basic details', async () => {
     const eventNameInput = page.getByPlaceholder('Event Name');
     await expect(eventNameInput).toBeVisible();
     await eventNameInput.click();
-    await eventNameInput.fill('test 17 X-Wearable Rechargeable Panic Badge Holder Deactivate - 1');
+    await eventNameInput.fill('test 17 X-Wearable Rechargeable Panic Badge Holder Deactivate - 1 ${eventName}');
     await page
       .getByRole('textbox', { name: 'Enter details' })
       .fill(faker.lorem.paragraph());
@@ -1530,7 +1530,7 @@ await test.step('Fill basic details', async () => {
     const eventNameInput = page.getByPlaceholder('Event Name');
     await expect(eventNameInput).toBeVisible();
     await eventNameInput.click();
-    await eventNameInput.fill('test 18 X-Wearable Rechargeable Panic Badge Holder Deactivate - 2');
+    await eventNameInput.fill('test 18 X-Wearable Rechargeable Panic Badge Holder Deactivate - 2 ${eventName}');
     await page
       .getByRole('textbox', { name: 'Enter details' })
       .fill(faker.lorem.paragraph());
@@ -1614,7 +1614,7 @@ await test.step('Fill basic details', async () => {
     const eventNameInput = page.getByPlaceholder('Event Name');
     await expect(eventNameInput).toBeVisible();
     await eventNameInput.click();
-    await eventNameInput.fill('test 19 X-Wearable Rechargeable Panic Badge Holder Deactivate - 3');
+    await eventNameInput.fill('test 19 X-Wearable Rechargeable Panic Badge Holder Deactivate - 3 ${eventName}');
     await page
       .getByRole('textbox', { name: 'Enter details' })
       .fill(faker.lorem.paragraph());
@@ -1664,3 +1664,4 @@ await test.step('Fill basic details', async () => {
   })
 })
 });
+
