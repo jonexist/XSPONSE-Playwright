@@ -24,7 +24,7 @@ test.describe('impersonate Customer and navigate to Contact Management', () => {
     await page.locator('a').filter({ hasText: 'Contacts' }).click();
    });
 
-    test('CRUD for contact management without uploading picture and no data on Contact Access.', async ({ page }) => {
+    test('CRUD for contact management with wearable access but without profile picture', async ({ page }) => {
       firstName = 'wearable';
       lastName = 'access';
       email = 'wearable@access.com';
@@ -94,6 +94,7 @@ test.describe('impersonate Customer and navigate to Contact Management', () => {
         //wait for confirmation message
         await expect(page.getByText('The contact has been updated successfully.')).toBeVisible();
       });
+      
       await test.step('Verify if it can view the edited contact and can delete the contact', async () => {
         await page.getByPlaceholder('Search Contact Name').click();
         await page.getByPlaceholder('Search Contact Name').type(firstName + ' ' + lastName, { delay: 40 });
