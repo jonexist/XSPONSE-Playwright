@@ -30,7 +30,8 @@ test('Dealer impersonation and customer creation flow', async ({ page }) => {
 
   // Click impersonate user button
   await page.waitForTimeout(3000);
-  await page.locator('tbody button').first().click();
+  // await page.locator('tbody button').first().click();
+  await page.locator('button[id^="impersonate-user-"]').first().click();
 
   // Select user to impersonate
   const impersonateHeading = page.getByRole('heading', {
@@ -92,7 +93,9 @@ test('Dealer impersonation and customer creation flow', async ({ page }) => {
   await page.getByText('Aleutians East Borough').click();
 
   // Fill ZIP Code and Save
-  await page.getByPlaceholder('Zip Code').fill(faker.location.zipCode());
+  await page
+    .getByPlaceholder('Zip Code')
+    .fill(faker.number.int({ min: 10000, max: 99999 }).toString());
   await page.getByText('Save').click();
   await expect(page.getByText('Customer created successfully')).toBeVisible();
 

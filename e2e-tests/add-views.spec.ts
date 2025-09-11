@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 
-test.describe('impersonate Customer and add views on playlist', () => {
+test.describe('impersonate Customer and add analog clock views on playlist', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/account-management/customer');
   });
@@ -45,4 +45,5 @@ test.only('should able to impersonate customer and add views on playlist', async
 
 
 })
+
 });
