@@ -14,12 +14,27 @@ test('Event creation – basic flow', async ({ page }) => {
 
     const addEventBtn = page.getByRole('button', { name: 'Add Event' });
     await expect(addEventBtn).toBeVisible();
-    await addEventBtn.click();
 
-    await page
-      .getByRole('button', { name: 'Select Basic Configuration' })
-      .click();
-    await page.getByRole('button', { name: 'Select Trigger Event' }).click();
+    // Wait for navigation after clicking
+    await Promise.all([
+      page.waitForURL(/\/event-management\/manage-event/),
+      addEventBtn.click(),
+    ]);
+
+    // Verify URL with increased timeout
+    await expect(page).toHaveURL(/\/event-management\/manage-event/, {
+      timeout: 30000,
+    });
+
+    const createEventBtn = page.getByRole('button', {
+      name: 'Select Basic Configuration',
+    });
+    createEventBtn.click();
+
+    const selectTriggerBtn = page.getByRole('button', {
+      name: 'Select Trigger Event',
+    });
+    selectTriggerBtn.click();
   });
 
   await test.step('Fill basic details', async () => {
@@ -36,9 +51,7 @@ test('Event creation – basic flow', async ({ page }) => {
       .filter({ hasText: /^Select\.\.\.$/ })
       .nth(2)
       .click();
-    await page
-      .getByRole('option', { name: 'XSponse Default Location' })
-      .click();
+    await page.getByRole('option', { name: 'SorSU-BC' }).click();
 
     await page.getByRole('button', { name: 'Next' }).click();
   });

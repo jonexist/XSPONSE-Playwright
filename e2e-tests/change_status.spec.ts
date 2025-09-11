@@ -4,7 +4,7 @@ test.describe('Change Status', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/account-management/customer');
   });
-test('  should able to change status', async ({ page }) => {
+test('should able to change status', async ({ page }) => {
   const row = page.locator('tr').filter({ hasText: 'Nexus Innovations Inc.' });
 
  // Click the row to select the customer

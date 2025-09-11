@@ -7,7 +7,7 @@ test.describe('Search Customer', () => {
 
 test('should able to search for a cutomer', async ({ page }) => {
     // Fill the search input with a customer name
-    const customerName = 'Nexus Innovations Inc.';
+    const customerName = 'Updated Nexus Innovations Inc.';
     const searchInput = page.getByRole('textbox', { name: 'Search Customer' });
 
     // Verify search input is empty initially
