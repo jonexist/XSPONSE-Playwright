@@ -6,7 +6,7 @@ test.describe('log in as admin and impersonate customer, Event creation and upda
     await page.goto('/account-management/customer');
   });
 
-test.only('log in as admin and impersonate customer, Event creation – basic flow', async ({ page }) => {
+test('log in as admin and impersonate customer, Event creation – basic flow', async ({ page }) => {
     const row = page.locator('tr').filter({ hasText: 'Tech Innovators' });
 
     // Click the row to select the customer

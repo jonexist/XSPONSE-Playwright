@@ -6,7 +6,7 @@ test.describe('impersonate Customer and add views on playlist', () => {
     await page.goto('/account-management/customer');
   });
 
-test.only('should able to impersonate customer and add digital word clock views on playlist', async ({ page }) => {
+test('should able to impersonate customer and add digital word clock views on playlist', async ({ page }) => {
     const row = page.locator('tr').filter({ hasText: 'Nexus Tech LLC' });
 
     // Click the row to select the customer
