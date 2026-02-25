@@ -1,0 +1,102 @@
+xsponse-e2e/
+│
+├── .env
+├── .gitignore
+│
+├── tests/
+│   │
+│   ├── allspecs/
+│   │   └── allspecs.spec.ts
+│   │
+│   ├── login/
+│   │   └── login.spec.ts
+│   │
+│   ├── profile/
+│   │   └── profile.spec.ts
+│   │
+│   ├── dashboard/
+│   │   └── dashboard.spec.ts
+│   │
+│   ├── account/
+│   │   ├── dealer.spec.ts
+│   │   ├── customer.spec.ts
+│   │   ├── fulfillment.spec.ts
+│   │   ├── users.spec.ts
+│   │   ├── rolesPermissions.spec.ts
+│   │   ├── pricingLevels.spec.ts
+│   │   ├── deviceTransfer.spec.ts
+│   │   └── customerTransfer.spec.ts
+│   │
+│   ├── products/
+│   │   ├── devices.spec.ts
+│   │   └── inventoryReports.spec.ts
+│   │
+│   ├── billing/
+│   │   ├── purchaseHistory.spec.ts
+│   │   ├── licenses.spec.ts
+│   │   ├── maintenance.spec.ts
+│   │   ├── addons.spec.ts
+│   │   └── voucher.spec.ts
+│   │
+│   ├── documentLibrary/
+│   │   └── documentLibrary.spec.ts
+│   │
+│   ├── updateManager/
+│   │   └── updateManager.spec.ts
+│   │
+│   ├── mapping/
+│   │   └── mapping.spec.ts
+│   │
+│   ├── logsHistory/
+│   │   └── logsHistory.spec.ts
+│   │
+│   └── releases/
+│       └── releases.spec.ts
+│
+├── pages/
+│   │
+│   ├── BasePage.ts
+│   ├── LoginPage.ts
+│   ├── DashboardPage.ts
+│   ├── ProfilePage.ts
+│   ├── AllspecsPage.ts
+│   │
+│   ├── account/
+│   │   ├── DealerPage.ts
+│   │   ├── CustomerPage.ts
+│   │   ├── FulfillmentPage.ts
+│   │   ├── UsersPage.ts
+│   │   ├── RolesPermissionsPage.ts
+│   │   ├── PricingLevelsPage.ts
+│   │   ├── DeviceTransferPage.ts
+│   │   └── CustomerTransferPage.ts
+│   │
+│   ├── products/
+│   │   ├── DevicesPage.ts
+│   │   └── InventoryReportsPage.ts
+│   │
+│   ├── billing/
+│   │   ├── PurchaseHistoryPage.ts
+│   │   ├── LicensesPage.ts
+│   │   ├── MaintenancePage.ts
+│   │   ├── AddOnsPage.ts
+│   │   └── VoucherPage.ts
+│   │
+│   ├── DocumentLibraryPage.ts
+│   ├── UpdateManagerPage.ts
+│   ├── MappingPage.ts
+│   ├── LogsHistoryPage.ts
+│   └── ReleasesPage.ts
+│
+├── fixtures/
+│   └── baseTest.ts
+│
+├── utils/
+│   ├── env.ts
+│   ├── testData.ts
+│   ├── constants.ts
+│   └── helpers.ts
+│
+├── playwright.config.ts
+├── package.json
+└── tsconfig.json
