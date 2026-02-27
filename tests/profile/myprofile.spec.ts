@@ -16,7 +16,7 @@ test.describe('My Profile Test', () => {
         // Verify that the URL is correct
         const currentUrl = page.url();
 
-        if (!currentUrl.includes('https://app.odi.xsponse.com/user-profile')) {
+        if (!currentUrl.includes(process.env.PROFILE_URL as string)) {
             throw new Error(`❌ Incorrect landing page. Current URL: ${currentUrl}`);
         }
 
