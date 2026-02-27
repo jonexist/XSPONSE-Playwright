@@ -12,3 +12,6 @@ playwright/.auth/*
 
 # Environment files
 .env
+
+# Playwright
+/playwright/.auth/
