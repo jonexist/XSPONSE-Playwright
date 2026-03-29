@@ -6,7 +6,7 @@ test.describe('impersonate Customer and check search and filters in contact mana
     await page.goto('/account-management/customer');
   });
 
-test.only('should able to impersonate Customer and check search and filters in contact management', async ({ page }) => {
+test('should able to impersonate Customer and check search and filters in contact management', async ({ page }) => {
     // Click the row to select the customer
   await page.getByTestId('customer-search-input').type('tech innovators llc', {delay:20});
   await page.getByTestId('customer-search-input').press('Enter');

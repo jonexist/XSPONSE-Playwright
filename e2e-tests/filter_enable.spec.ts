@@ -29,7 +29,6 @@ test.describe('Customer Status Filtering', () => {
 
     // 5. Verify all results show the correct status
     await expect(statusBadges).not.toHaveCount(0);
-    
     for (let i = 0; i < resultCount; i++) {
       await expect(statusBadges.nth(i)).toHaveText(targetStatus);
     }

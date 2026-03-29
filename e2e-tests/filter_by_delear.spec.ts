@@ -21,12 +21,10 @@ test.describe('Filter by Dealer', () => {
     await expect(dealerOption).toBeVisible({ timeout: 10000 });
     await dealerOption.click();
 
-     // Verify filtered result in table (type-safe strict locator)
+    // Verify filtered result in table
       const filteredResult = page.locator('div.text-sm.capitalize.text-default-600')
         .filter({ hasText: dealerName });
       await expect(filteredResult).toBeVisible();
-      
-    // Optionally pause to inspect
-    // await page.pause();
+
   });
 });
